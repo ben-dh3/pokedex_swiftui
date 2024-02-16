@@ -70,22 +70,25 @@ struct ContentView: View {
                                     }
                                 }
                             }
-                            Text("Types:")
+                            Text("Type:")
                                 .font(Font.body.weight(.medium))
+                                .padding(1)
                             HStack {
                                 ForEach(viewModel.pokemonType ?? [], id: \.self) { type in
                                     Text(type)
                                         .padding(1)
                                         .font(Font.body.weight(.medium))
+                                        .foregroundColor(.green)
                                 }
                             }
-                            Text("Abilities:")
+                            Text("Ability:")
                                 .font(Font.body.weight(.medium))
                             HStack {
                                 ForEach(viewModel.pokemonAbility ?? [], id: \.self) { ability in
                                     Text(ability)
                                         .padding(1)
                                         .font(Font.body.weight(.medium))
+                                        .foregroundColor(.yellow)
                                 }
                             }
                         }else {
